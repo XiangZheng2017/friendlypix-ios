@@ -18,7 +18,6 @@
 #import "SignInViewController.h"
 #import "FPAppState.h"
 @import Firebase;
-@import FirebaseAuthUI;
 @import FirebaseGoogleAuthUI;
 @import FirebaseFacebookAuthUI;
 @import FirebaseTwitterAuthUI;
@@ -29,7 +28,6 @@ static NSString *const kFacebookAppID = @"FACEBOOK_APP_ID";
 static NSString *const kFirebaseTermsOfService = @"https://firebase.google.com/terms/";
 
 @interface SignInViewController()
-@property (nonatomic) FIRAuth *auth;
 @property (nonatomic) FUIAuth *authUI;
 @property(strong, nonatomic) FIRAuthStateDidChangeListenerHandle authStateDidChangeHandle;
 @end
@@ -39,8 +37,8 @@ static NSString *const kFirebaseTermsOfService = @"https://firebase.google.com/t
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
 
-  self.auth = [FIRAuth auth];
   self.authUI = [FUIAuth defaultAuthUI];
+  self.authUI.delegate = self;
 
   _authUI.TOSURL = [NSURL URLWithString:kFirebaseTermsOfService];
   _authUI.signInWithEmailHidden = YES;
@@ -50,35 +48,14 @@ static NSString *const kFirebaseTermsOfService = @"https://firebase.google.com/t
                                               [[FUITwitterAuth alloc] init],
                                               ];
   _authUI.providers = providers;
-
-  __weak SignInViewController *weakSelf = self;
-  self.authStateDidChangeHandle = [_auth
-                                   addAuthStateDidChangeListener:^(FIRAuth *_Nonnull auth, FIRUser *_Nullable user) {
-                                     if (user) {
-                                       [weakSelf signedIn:user];
-                                     }
-                                   }];
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-  [super viewWillDisappear:animated];
-  [_auth removeAuthStateDidChangeListener:_authStateDidChangeHandle];
-}
-
--(void)signIn:(GIDSignIn *)signIn didSignInForUser:(GIDGoogleUser *)user withError:(NSError *)error {
+- (void)authUI:(FUIAuth *)authUI didSignInWithUser:(nullable FIRUser *)user error:(nullable NSError *)error {
   if (error) {
     NSLog(@"%@", error.localizedDescription);
     return;
   }
-  GIDAuthentication *auth = user.authentication;
-  FIRAuthCredential *credential = [FIRGoogleAuthProvider credentialWithIDToken:auth.idToken accessToken:auth.accessToken];
-  [_auth signInWithCredential:credential completion:^(FIRUser * _Nullable user, NSError * _Nullable error) {
-    if (error) {
-      NSLog(@"%@", error.localizedDescription);
-      return;
-    }
     [self signedIn:user];
-  }];
 }
 
 - (IBAction)didTapSignIn:(UIButton *)sender {

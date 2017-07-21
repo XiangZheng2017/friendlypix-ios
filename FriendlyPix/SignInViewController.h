@@ -15,7 +15,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@import GoogleSignIn;
+@import FirebaseAuthUI;
 
-@interface SignInViewController : UIViewController<GIDSignInDelegate, GIDSignInUIDelegate>
+@interface SignInViewController : UIViewController<FUIAuthDelegate>
 @end
