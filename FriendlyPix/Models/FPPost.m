@@ -17,7 +17,7 @@
 #import "FPPost.h"
 #import "FPUser.h"
 #import "FPAppState.h"
-#import <KZPropertyMapper/KZPropertyMapper.h>
+#import "KZPropertyMapper.h"
 #define MAX_NUMBER_OF_COMMENTS 5
 
 
