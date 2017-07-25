@@ -11,7 +11,7 @@ before_install:
   - gem install xcpretty
   - bundle exec pod install --repo-update
   - cp ./mock-GoogleService-Info.plist FriendlyPix/GoogleService-Info.plist
-  - sed -i '' 's/YOUR_REVERSED_CLIENT_ID/com.googleusercontent.apps.123456789000-hjugbg6ud799v4c49dim8ce2usclthar/' /Info.plist
+  - sed -i '' 's/YOUR_REVERSED_CLIENT_ID/com.googleusercontent.apps.123456789000-hjugbg6ud799v4c49dim8ce2usclthar/' FriendlyPix/Info.plist
   - ruby ./info_script.rb
 
 script: ./test.sh
