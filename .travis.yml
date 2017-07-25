@@ -12,7 +12,7 @@ before_install:
   - cd FriendlyPix
   - bundle exec pod install --repo-update
   - cp ../mock-GoogleService-Info.plist ./GoogleService-Info.plist
-  - sed -i '' 's/YOUR_REVERSED_CLIENT_ID/com.googleusercontent.apps.123456789000-hjugbg6ud799v4c49dim8ce2usclthar/' FriendlyPix/Info.plist
+  - sed -i '' 's/YOUR_REVERSED_CLIENT_ID/com.googleusercontent.apps.123456789000-hjugbg6ud799v4c49dim8ce2usclthar/' ./Info.plist
   - ruby ../info_script.rb
   - cd -
 
