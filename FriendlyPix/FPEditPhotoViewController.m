@@ -27,6 +27,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UITextField *commentTextField;
 @property (strong, nonatomic) FIRStorageReference *storageRef;
+@property (strong, nonatomic) FIRDatabaseReference *postRef;
 @property (strong, nonatomic) NSString *fileUrl;
 @property (strong, nonatomic) NSString *storageUri;
 @end
@@ -64,6 +65,8 @@
 #pragma mark - ()
 
 - (BOOL)shouldUploadImage:(NSURL *)URL {
+  _postRef = [[[FIRDatabase database].reference child:@"posts"] childByAutoId];
+
   //    UIImage *resizedImage = [anImage resizedImageWithContentMode:UIViewContentModeScaleAspectFit bounds:CGSizeMake(560.0f, 560.0f) interpolationQuality:kCGInterpolationHigh];
   //    UIImage *thumbnailImage = [anImage thumbnailImage:86.0f transparentBorder:0.0f cornerRadius:10.0f interpolationQuality:kCGInterpolationDefault];
 
@@ -90,7 +93,8 @@
   [asset requestContentEditingInputWithOptions:nil
                              completionHandler:^(PHContentEditingInput *contentEditingInput, NSDictionary *info) {
                                NSURL *imageFile = contentEditingInput.fullSizeImageURL;
-                               NSString *filePath = [NSString stringWithFormat:@"%@/%lld/%@", [FPAppState sharedInstance].currentUser.userID, (long long)([NSDate date].timeIntervalSince1970 * 1000.0), _referenceURL.lastPathComponent];
+                               NSString *filePath = [NSString stringWithFormat:@"%@/%@/%@", [FPAppState sharedInstance].currentUser.userID,
+                                                     _postRef.key, _referenceURL.lastPathComponent];
                                FIRStorageMetadata *metadata = [FIRStorageMetadata new];
                                metadata.contentType = @"image/jpeg";
                                [[_storageRef child:filePath]
@@ -119,12 +123,9 @@
                            @"timestamp" : FIRServerValue.timestamp
                            };
 
-  FIRDatabaseReference *ref;
-  ref = [FIRDatabase database].reference;
-  FIRDatabaseReference *photo = [[ref child:@"posts"] childByAutoId];
-  [photo setValue:data];
-  NSString *postId = photo.key;
-  [ref updateChildValues:@{
+  [_postRef setValue:data];
+  NSString *postId = _postRef.key;
+  [_postRef.root updateChildValues:@{
                            [NSString stringWithFormat:@"people/%@/posts/%@", [FPAppState sharedInstance].currentUser.userID, postId]: @YES,
                            [NSString stringWithFormat:@"feed/%@/%@", [FPAppState sharedInstance].currentUser.userID, postId]: @YES
                            }];
