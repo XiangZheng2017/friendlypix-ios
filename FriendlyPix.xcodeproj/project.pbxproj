@@ -22,7 +22,6 @@
 		1061E5921C24F2E300B3BD42 /* FPComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 1061E5911C24F2E300B3BD42 /* FPComment.m */; };
 		1061E5951C24F59600B3BD42 /* FPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1061E5941C24F59600B3BD42 /* FPUser.m */; };
 		1061E5981C24F68200B3BD42 /* FPPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 1061E5971C24F68200B3BD42 /* FPPost.m */; };
-		107EDFF91F2B9DEB00752EB5 /* FriendlyPixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 107EDFF81F2B9DEB00752EB5 /* FriendlyPixTests.swift */; };
 		2C8562821AFAB65F00F0B24B /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C85627D1AFAB65F00F0B24B /* Icon@2x.png */; };
 		2C8562841AFAB65F00F0B24B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C85627E1AFAB65F00F0B24B /* Images.xcassets */; };
 		2C8562861AFAB65F00F0B24B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C85627F1AFAB65F00F0B24B /* LaunchScreen.xib */; };
@@ -31,16 +30,6 @@
 		5F5A53581ADE670C00F81DF0 /* FPHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5A53571ADE670C00F81DF0 /* FPHomeViewController.m */; };
 		5F5A535B1ADE670C00F81DF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F5A53591ADE670C00F81DF0 /* Main.storyboard */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		107EDFFB1F2B9DEB00752EB5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5F5A53441ADE670C00F81DF0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5F5A534B1ADE670C00F81DF0;
-			remoteInfo = FriendlyPix;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1024C2DF1C88C3FD00945A88 /* KZPropertyMapper+Date.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KZPropertyMapper+Date.h"; sourceTree = "<group>"; };
@@ -72,8 +61,6 @@
 		1061E5961C24F68200B3BD42 /* FPPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPPost.h; sourceTree = "<group>"; };
 		1061E5971C24F68200B3BD42 /* FPPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPPost.m; sourceTree = "<group>"; };
 		106E09D21E5107C800A0FA44 /* FriendlyPix.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FriendlyPix.entitlements; sourceTree = "<group>"; };
-		107EDFF61F2B9DEA00752EB5 /* FriendlyPixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FriendlyPixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		107EDFF81F2B9DEB00752EB5 /* FriendlyPixTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendlyPixTests.swift; sourceTree = "<group>"; };
 		2C85627D1AFAB65F00F0B24B /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		2C85627E1AFAB65F00F0B24B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2C85627F1AFAB65F00F0B24B /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
@@ -88,13 +75,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		107EDFF31F2B9DEA00752EB5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5F5A53491ADE670C00F81DF0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -146,14 +126,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		107EDFF71F2B9DEB00752EB5 /* FriendlyPixTests */ = {
-			isa = PBXGroup;
-			children = (
-				107EDFF81F2B9DEB00752EB5 /* FriendlyPixTests.swift */,
-			);
-			path = FriendlyPixTests;
-			sourceTree = "<group>";
-		};
 		2C85627A1AFAB65F00F0B24B /* shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,7 +141,6 @@
 			children = (
 				2C85627A1AFAB65F00F0B24B /* shared */,
 				5F5A534E1ADE670C00F81DF0 /* FriendlyPix */,
-				107EDFF71F2B9DEB00752EB5 /* FriendlyPixTests */,
 				5F5A534D1ADE670C00F81DF0 /* Products */,
 				AD1F1C80A93A096F652504F5 /* Frameworks */,
 			);
@@ -179,7 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				5F5A534C1ADE670C00F81DF0 /* FriendlyPix.app */,
-				107EDFF61F2B9DEA00752EB5 /* FriendlyPixTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -223,24 +193,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		107EDFF51F2B9DEA00752EB5 /* FriendlyPixTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 107EDFFF1F2B9DEB00752EB5 /* Build configuration list for PBXNativeTarget "FriendlyPixTests" */;
-			buildPhases = (
-				107EDFF21F2B9DEA00752EB5 /* Sources */,
-				107EDFF31F2B9DEA00752EB5 /* Frameworks */,
-				107EDFF41F2B9DEA00752EB5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				107EDFFC1F2B9DEB00752EB5 /* PBXTargetDependency */,
-			);
-			name = FriendlyPixTests;
-			productName = FriendlyPixTests;
-			productReference = 107EDFF61F2B9DEA00752EB5 /* FriendlyPixTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		5F5A534B1ADE670C00F81DF0 /* FriendlyPix */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F5A536F1ADE670C00F81DF0 /* Build configuration list for PBXNativeTarget "FriendlyPix" */;
@@ -268,11 +220,6 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Google Inc.";
 				TargetAttributes = {
-					107EDFF51F2B9DEA00752EB5 = {
-						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 5F5A534B1ADE670C00F81DF0;
-					};
 					5F5A534B1ADE670C00F81DF0 = {
 						CreatedOnToolsVersion = 6.3;
 						SystemCapabilities = {
@@ -297,19 +244,11 @@
 			projectRoot = "";
 			targets = (
 				5F5A534B1ADE670C00F81DF0 /* FriendlyPix */,
-				107EDFF51F2B9DEA00752EB5 /* FriendlyPixTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		107EDFF41F2B9DEA00752EB5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5F5A534A1ADE670C00F81DF0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -324,14 +263,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		107EDFF21F2B9DEA00752EB5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				107EDFF91F2B9DEB00752EB5 /* FriendlyPixTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5F5A53481ADE670C00F81DF0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -356,14 +287,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		107EDFFC1F2B9DEB00752EB5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5F5A534B1ADE670C00F81DF0 /* FriendlyPix */;
-			targetProxy = 107EDFFB1F2B9DEB00752EB5 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
 		5F5A53591ADE670C00F81DF0 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -376,48 +299,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		107EDFFD1F2B9DEB00752EB5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				INFOPLIST_FILE = FriendlyPixTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.google.samples.FriendlyPixTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FriendlyPix.app/FriendlyPix";
-			};
-			name = Debug;
-		};
-		107EDFFE1F2B9DEB00752EB5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				INFOPLIST_FILE = FriendlyPixTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.google.samples.FriendlyPixTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FriendlyPix.app/FriendlyPix";
-			};
-			name = Release;
-		};
 		5F5A536D1ADE670C00F81DF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -555,15 +436,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		107EDFFF1F2B9DEB00752EB5 /* Build configuration list for PBXNativeTarget "FriendlyPixTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				107EDFFD1F2B9DEB00752EB5 /* Debug */,
-				107EDFFE1F2B9DEB00752EB5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		5F5A53471ADE670C00F81DF0 /* Build configuration list for PBXProject "FriendlyPix" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
