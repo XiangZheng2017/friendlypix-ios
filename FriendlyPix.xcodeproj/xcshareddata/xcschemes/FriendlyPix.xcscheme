@@ -29,16 +29,6 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "102748E01F6496F90058B889"
-               BuildableName = "FriendlyPixTests.xctest"
-               BlueprintName = "FriendlyPixTests"
-               ReferencedContainer = "container:FriendlyPix.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

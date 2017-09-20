@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1024C2E11C88C3FD00945A88 /* KZPropertyMapper+Date.m in Sources */ = {isa = PBXBuildFile; fileRef = 1024C2E01C88C3FD00945A88 /* KZPropertyMapper+Date.m */; };
-		102748E41F6496F90058B889 /* FriendlyPixTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 102748E31F6496F90058B889 /* FriendlyPixTests.m */; };
 		104DECDD1C31E3680044430F /* FPAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104DECDC1C31E3680044430F /* FPAccountViewController.m */; };
 		104DECEB1C3334920044430F /* FPFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104DECEA1C3334920044430F /* FPFeedViewController.m */; };
 		10563BFE1C29EDFB00356685 /* FPCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10563BFD1C29EDFB00356685 /* FPCommentViewController.m */; };
@@ -32,21 +31,9 @@
 		5F5A535B1ADE670C00F81DF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F5A53591ADE670C00F81DF0 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		102748E61F6496F90058B889 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5F5A53441ADE670C00F81DF0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5F5A534B1ADE670C00F81DF0;
-			remoteInfo = FriendlyPix;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		1024C2DF1C88C3FD00945A88 /* KZPropertyMapper+Date.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KZPropertyMapper+Date.h"; sourceTree = "<group>"; };
 		1024C2E01C88C3FD00945A88 /* KZPropertyMapper+Date.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KZPropertyMapper+Date.m"; sourceTree = "<group>"; };
-		102748E11F6496F90058B889 /* FriendlyPixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FriendlyPixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		102748E31F6496F90058B889 /* FriendlyPixTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendlyPixTests.m; sourceTree = "<group>"; };
 		1037935F1BF4256400C88958 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = Pods/Firebase/Headers/module.modulemap; sourceTree = "<group>"; };
 		104DECDB1C31E3680044430F /* FPAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPAccountViewController.h; sourceTree = "<group>"; };
 		104DECDC1C31E3680044430F /* FPAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPAccountViewController.m; sourceTree = "<group>"; };
@@ -88,13 +75,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		102748DE1F6496F90058B889 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5F5A53491ADE670C00F81DF0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -108,14 +88,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		102748E21F6496F90058B889 /* FriendlyPixTests */ = {
-			isa = PBXGroup;
-			children = (
-				102748E31F6496F90058B889 /* FriendlyPixTests.m */,
-			);
-			path = FriendlyPixTests;
-			sourceTree = "<group>";
-		};
 		104DECED1C344BDC0044430F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,7 +141,6 @@
 			children = (
 				2C85627A1AFAB65F00F0B24B /* shared */,
 				5F5A534E1ADE670C00F81DF0 /* FriendlyPix */,
-				102748E21F6496F90058B889 /* FriendlyPixTests */,
 				5F5A534D1ADE670C00F81DF0 /* Products */,
 				AD1F1C80A93A096F652504F5 /* Frameworks */,
 			);
@@ -179,7 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				5F5A534C1ADE670C00F81DF0 /* FriendlyPix.app */,
-				102748E11F6496F90058B889 /* FriendlyPixTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -223,24 +193,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		102748E01F6496F90058B889 /* FriendlyPixTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 102748EA1F6496F90058B889 /* Build configuration list for PBXNativeTarget "FriendlyPixTests" */;
-			buildPhases = (
-				102748DD1F6496F90058B889 /* Sources */,
-				102748DE1F6496F90058B889 /* Frameworks */,
-				102748DF1F6496F90058B889 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				102748E71F6496F90058B889 /* PBXTargetDependency */,
-			);
-			name = FriendlyPixTests;
-			productName = FriendlyPixTests;
-			productReference = 102748E11F6496F90058B889 /* FriendlyPixTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		5F5A534B1ADE670C00F81DF0 /* FriendlyPix */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F5A536F1ADE670C00F81DF0 /* Build configuration list for PBXNativeTarget "FriendlyPix" */;
@@ -268,11 +220,6 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Google Inc.";
 				TargetAttributes = {
-					102748E01F6496F90058B889 = {
-						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 5F5A534B1ADE670C00F81DF0;
-					};
 					5F5A534B1ADE670C00F81DF0 = {
 						CreatedOnToolsVersion = 6.3;
 						SystemCapabilities = {
@@ -297,19 +244,11 @@
 			projectRoot = "";
 			targets = (
 				5F5A534B1ADE670C00F81DF0 /* FriendlyPix */,
-				102748E01F6496F90058B889 /* FriendlyPixTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		102748DF1F6496F90058B889 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5F5A534A1ADE670C00F81DF0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -324,14 +263,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		102748DD1F6496F90058B889 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				102748E41F6496F90058B889 /* FriendlyPixTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5F5A53481ADE670C00F81DF0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -356,14 +287,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		102748E71F6496F90058B889 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5F5A534B1ADE670C00F81DF0 /* FriendlyPix */;
-			targetProxy = 102748E61F6496F90058B889 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
 		5F5A53591ADE670C00F81DF0 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -376,71 +299,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		102748E81F6496F90058B889 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = "";
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = FriendlyPix/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.google.samples.FriendlyPixTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FriendlyPix.app/FriendlyPix";
-			};
-			name = Debug;
-		};
-		102748E91F6496F90058B889 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = "";
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = FriendlyPix/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.google.samples.FriendlyPixTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FriendlyPix.app/FriendlyPix";
-			};
-			name = Release;
-		};
 		5F5A536D1ADE670C00F81DF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -590,15 +448,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		102748EA1F6496F90058B889 /* Build configuration list for PBXNativeTarget "FriendlyPixTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				102748E81F6496F90058B889 /* Debug */,
-				102748E91F6496F90058B889 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		5F5A53471ADE670C00F81DF0 /* Build configuration list for PBXProject "FriendlyPix" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
