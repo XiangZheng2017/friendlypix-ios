@@ -20,24 +20,24 @@
 
 @implementation FPHomeViewController
 
-- (void)loadFeed {
-
+- (void)loadData {
+  self.query = [[self.ref child:@"feed"] child:[FPAppState sharedInstance].currentUser.userID];
   // Make sure the home feed is updated with followed users's new posts.
   // Only after the feed creation is complete, start fetching the posts.
   [self updateHomeFeeds];
 }
 
 -(void)getHomeFeedPosts {
-  FIRDatabaseQuery *homeFeedQuery = [[[super.ref child:@"feed"] child:[FPAppState sharedInstance].currentUser.userID] queryOrderedByKey];
-  [homeFeedQuery observeEventType:FIRDataEventTypeChildAdded
-                        withBlock:^(FIRDataSnapshot *feedSnapshot) {
-     [[super.ref child:[@"posts/" stringByAppendingString:feedSnapshot.key]]
-      observeEventType:FIRDataEventTypeValue
-      withBlock:^(FIRDataSnapshot *postSnapshot) {
-        [super loadPost:postSnapshot];
-      }];
-   }];
+  [self loadFeed:nil];
 }
+
+- (void)loadItem:(FIRDataSnapshot *)item {
+ [[super.ref child:[@"posts/" stringByAppendingString:item.key]]
+  observeEventType:FIRDataEventTypeValue
+         withBlock:^(FIRDataSnapshot *postSnapshot) {
+           [super loadPost:postSnapshot];
+         }];
+};
 
 /**
  * Keeps the home feed populated with latest followed users' posts live.

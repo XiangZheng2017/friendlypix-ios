@@ -30,36 +30,40 @@
 
 @implementation FPAccountViewController
 
-- (void)loadFeed {
+- (void)loadData {
   [[[super.ref child:@"people"] child:_user.userID]
    observeSingleEventOfType:FIRDataEventTypeValue
    withBlock:^(FIRDataSnapshot *userSnapshot) {
      NSArray *posts = [userSnapshot childSnapshotForPath:@"posts"].value;
-     self.postCount = posts.count;
      self.followingCount = [userSnapshot childSnapshotForPath:@"following"].childrenCount;
      [self feedDidLoad];
-     for (NSString *postId in posts) {
-       [[super.ref child:[@"posts/" stringByAppendingString:postId]]
-        observeEventType:FIRDataEventTypeValue
-        withBlock:^(FIRDataSnapshot *postSnapshot) {
-          [super loadPost:postSnapshot];
-        }];
+     if (posts && ![posts isEqual:[NSNull null]]) {
+       self.postCount = posts.count;
+       for (NSString *postId in posts) {
+         [[super.ref child:[@"posts/" stringByAppendingString:postId]]
+          observeEventType:FIRDataEventTypeValue
+                 withBlock:^(FIRDataSnapshot *postSnapshot) {
+                   [super loadPost:postSnapshot];
+                 }];
+       }
+     } else {
+       self.postCount = 0;
      }
    }];
   [[[super.ref child:@"followers"] child: _user.userID]
    observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
      self.followers = snapshot.value;
-     unsigned long followersCount = _followers.count;
+     if (_followers) {
+     unsigned long followersCount = (_followers && ![_followers isEqual:[NSNull null]]) ? _followers.count : 0;
+
      _followerCountLabel.text = [NSString
                                    stringWithFormat:@"%lu follower%@",
                                    followersCount, followersCount==1?@"":@"s"];
-
+     }
    }];
 
   [_profilePictureImageView setCircleImageWithURL:_user.profilePictureURL placeholderImage:[UIImage imageNamed:@"PlaceholderPhoto"]];
 }
-
-
 
 #pragma mark - UIViewController
 

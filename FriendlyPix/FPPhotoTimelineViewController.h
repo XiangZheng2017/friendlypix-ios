@@ -23,5 +23,7 @@
 @property FIRDatabaseReference *postsRef;
 @property FIRDatabaseReference *commentsRef;
 @property FIRDatabaseReference *likesRef;
+@property FIRDatabaseReference *query;
 - (void)loadPost:(FIRDataSnapshot *)postSnapshot;
+- (void)loadFeed:(NSString *)earliestEntryId;
 @end

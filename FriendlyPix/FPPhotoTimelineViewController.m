@@ -35,6 +35,7 @@
 @property (strong, nonatomic) STXFeedTableViewDataSource *tableViewDataSource;
 @property (strong, nonatomic) STXFeedTableViewDelegate *tableViewDelegate;
 @property (strong, nonatomic) NSMutableArray *posts;
+@property (nonatomic) unsigned int loadingPostCount;
 
 @end
 
@@ -61,9 +62,12 @@
   self.tableViewDelegate = delegate;
    
   self.activityIndicatorView = [self activityIndicatorViewOnView:self.view];
-    
-  [self loadFeed];
+
+  _loadingPostCount = 0;
+  [self loadData];
 }
+
+
 
 - (void)dealloc {
   // To prevent crash when popping this from navigation controller
@@ -85,10 +89,29 @@
   }
 }
 
-- (void)loadFeed {
-  // Listen for new messages in the Firebase database
-  [_postsRef observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot *postSnapshot) {
-    [self loadPost:postSnapshot];
+- (void)loadData {
+  self.query =_postsRef;
+  [self loadFeed:nil];
+}
+
+- (void)loadItem:(FIRDataSnapshot *)item {
+  [self loadPost:item];
+}
+
+- (void)loadFeed:(NSString *)earliestEntryId {
+  FIRDatabaseQuery *query = [_query queryOrderedByKey];
+  if (earliestEntryId) {
+    query = [query queryEndingAtValue:earliestEntryId];
+  }
+  _loadingPostCount+=6;
+  [[query queryLimitedToLast:6] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+    NSEnumerator *enumerator = snapshot.children.allObjects.reverseObjectEnumerator;
+    if (earliestEntryId) {
+      [enumerator nextObject];
+    }
+    for (FIRDataSnapshot *itemSnapshot in enumerator ) {
+      [self loadItem:itemSnapshot];
+    }
   }];
 
   [_postsRef observeEventType:FIRDataEventTypeChildRemoved withBlock:^(FIRDataSnapshot *postSnapshot) {
@@ -100,6 +123,13 @@
       withRowAnimation:UITableViewRowAnimationNone];
      [self.tableView reloadData];
    }];
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+  if (indexPath.section == _loadingPostCount - 1 && indexPath.row == 0) {
+    STXFeedPhotoCell *pCell = (STXFeedPhotoCell *)cell;
+    [self loadFeed:pCell.postItem.postID];
+  }
 }
 
 - (void)loadPost:(FIRDataSnapshot *)postSnapshot {
