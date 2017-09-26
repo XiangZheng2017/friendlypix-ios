@@ -161,7 +161,6 @@
   if ([segue.identifier isEqualToString:@"edit"])  {
     UINavigationController *navigationController = segue.destinationViewController;
     FPEditPhotoViewController *viewController = (FPEditPhotoViewController *)navigationController.topViewController;
-//    FPEditPhotoViewController *viewController = segue.destinationViewController;
     viewController.image = sender[UIImagePickerControllerEditedImage];
     viewController.referenceURL = sender[UIImagePickerControllerReferenceURL];
   }

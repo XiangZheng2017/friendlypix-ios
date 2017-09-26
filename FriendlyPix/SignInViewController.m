@@ -74,7 +74,8 @@ static NSString *const kFirebaseTermsOfService = @"https://firebase.google.com/t
       NSDictionary *person = @{
                                @"full_name" : user.displayName ? user.displayName : @"",
                                @"profile_picture" : user.photoURL ? (user.photoURL).absoluteString : @"",
-                               @"_search_index" : @{
+                               @"_search_index" :
+                                 @{
                                    @"full_name": user.displayName ? user.displayName.lowercaseString : @"",
                                    @"reversed_full_name": [[self reverseArray:[user.displayName componentsSeparatedByString:@" "]] componentsJoinedByString:@" "]
                                    }

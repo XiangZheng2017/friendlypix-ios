@@ -29,13 +29,9 @@
 @property (copy, nonatomic) NSURL *imageURL;
 @property (copy, nonatomic) NSURL *link;
 
-//@property (copy, nonatomic) NSDictionary *caption;
-
 @property (copy, nonatomic) FPUser *user;
 @property (copy, nonatomic) NSString *text;
 
-//@property (nonatomic) NSInteger likeCount;
-//@property (nonatomic) NSInteger commentCount;
 @property (copy, nonatomic) NSMutableArray *comments;
 
 @end
@@ -49,9 +45,6 @@
   [encoder encodeObject:_postDate forKey:@"postDate"];
   [encoder encodeObject:_imageURL forKey:@"imageURL"];
   [encoder encodeObject:_link forKey:@"link"];
-  //  [encoder encodeObject:_caption forKey:@"caption"];
-  //  [encoder encodeInteger:_likeCount forKey:@"likeCount"];
-  //  [encoder encodeInteger:_commentCount forKey:@"commentCount"];
   [encoder encodeObject:_comments forKey:@"comments"];
   [encoder encodeObject:_likes forKey:@"likes"];
   [encoder encodeObject:_user forKey:@"user"];
@@ -66,9 +59,6 @@
     _postDate = [decoder decodeObjectForKey:@"postDate"];
     _imageURL = [decoder decodeObjectForKey:@"imageURL"];
     _link = [decoder decodeObjectForKey:@"link"];
-    //    _caption = [decoder decodeObjectForKey:@"caption"];
-    //    _likeCount = [decoder decodeIntegerForKey:@"likeCount"];
-    //    _commentCount = [decoder decodeIntegerForKey:@"commentCount"];
     _comments = [decoder decodeObjectForKey:@"comments"];
     _likes = [decoder decodeObjectForKey:@"likes"];
     _user = [decoder decodeObjectForKey:@"user"];
@@ -100,7 +90,7 @@
     NSArray *errors;
     NSDictionary *mappingDictionary = @{
                                         @"text": KZProperty(text),
-                                        @"url": KZBox(URL, imageURL),
+                                        @"full_url": KZBox(URL, imageURL),
                                         @"timestamp": KZBox(Date, postDate)
                                         };
 
@@ -164,14 +154,6 @@
 - (NSURL *)photoURL {
   return self.imageURL;
 }
-
-//- (NSArray *)comments {
-//  return [_comments copy];
-//}
-
-//- (NSArray *)mutableComments {
-//  return _comments;
-//}
 
 - (NSInteger)totalLikes {
   long totalLikes = _likes.count;
