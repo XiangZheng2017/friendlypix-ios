@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1005CCB21F7C2223002103B3 /* FPAuthPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1005CCB01F7C2223002103B3 /* FPAuthPickerViewController.m */; };
+		1005CCB31F7C2223002103B3 /* FPAuthPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1005CCB11F7C2223002103B3 /* FPAuthPickerViewController.xib */; };
+		1005CCBA1F7C3710002103B3 /* GradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1005CCB91F7C3710002103B3 /* GradientLayer.m */; };
 		1024C2E11C88C3FD00945A88 /* KZPropertyMapper+Date.m in Sources */ = {isa = PBXBuildFile; fileRef = 1024C2E01C88C3FD00945A88 /* KZPropertyMapper+Date.m */; };
 		104DECDD1C31E3680044430F /* FPAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104DECDC1C31E3680044430F /* FPAccountViewController.m */; };
 		104DECEB1C3334920044430F /* FPFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104DECEA1C3334920044430F /* FPFeedViewController.m */; };
@@ -22,7 +25,7 @@
 		1061E5921C24F2E300B3BD42 /* FPComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 1061E5911C24F2E300B3BD42 /* FPComment.m */; };
 		1061E5951C24F59600B3BD42 /* FPUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1061E5941C24F59600B3BD42 /* FPUser.m */; };
 		1061E5981C24F68200B3BD42 /* FPPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 1061E5971C24F68200B3BD42 /* FPPost.m */; };
-		2C8562821AFAB65F00F0B24B /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C85627D1AFAB65F00F0B24B /* Icon@2x.png */; };
+		10C9B1DD1F7C0E600039E4BD /* Amaranth-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 10C9B1D91F7C0E600039E4BD /* Amaranth-Bold.otf */; };
 		2C8562841AFAB65F00F0B24B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C85627E1AFAB65F00F0B24B /* Images.xcassets */; };
 		2C8562861AFAB65F00F0B24B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C85627F1AFAB65F00F0B24B /* LaunchScreen.xib */; };
 		5F5A53521ADE670C00F81DF0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5A53511ADE670C00F81DF0 /* main.m */; };
@@ -32,6 +35,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1005CCAF1F7C2223002103B3 /* FPAuthPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPAuthPickerViewController.h; sourceTree = "<group>"; };
+		1005CCB01F7C2223002103B3 /* FPAuthPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPAuthPickerViewController.m; sourceTree = "<group>"; };
+		1005CCB11F7C2223002103B3 /* FPAuthPickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FPAuthPickerViewController.xib; sourceTree = "<group>"; };
+		1005CCB81F7C3710002103B3 /* GradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientLayer.h; sourceTree = "<group>"; };
+		1005CCB91F7C3710002103B3 /* GradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientLayer.m; sourceTree = "<group>"; };
 		1024C2DF1C88C3FD00945A88 /* KZPropertyMapper+Date.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "KZPropertyMapper+Date.h"; sourceTree = "<group>"; };
 		1024C2E01C88C3FD00945A88 /* KZPropertyMapper+Date.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "KZPropertyMapper+Date.m"; sourceTree = "<group>"; };
 		1037935F1BF4256400C88958 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = Pods/Firebase/Headers/module.modulemap; sourceTree = "<group>"; };
@@ -61,7 +69,7 @@
 		1061E5961C24F68200B3BD42 /* FPPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPPost.h; sourceTree = "<group>"; };
 		1061E5971C24F68200B3BD42 /* FPPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPPost.m; sourceTree = "<group>"; };
 		106E09D21E5107C800A0FA44 /* FriendlyPix.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FriendlyPix.entitlements; sourceTree = "<group>"; };
-		2C85627D1AFAB65F00F0B24B /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		10C9B1D91F7C0E600039E4BD /* Amaranth-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amaranth-Bold.otf"; sourceTree = "<group>"; };
 		2C85627E1AFAB65F00F0B24B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2C85627F1AFAB65F00F0B24B /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		5F5A534C1ADE670C00F81DF0 /* FriendlyPix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendlyPix.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +115,9 @@
 				1061E4A01C2280CA00B3BD42 /* SignInViewController.m */,
 				10563BFC1C29EDFB00356685 /* FPCommentViewController.h */,
 				10563BFD1C29EDFB00356685 /* FPCommentViewController.m */,
+				1005CCAF1F7C2223002103B3 /* FPAuthPickerViewController.h */,
+				1005CCB01F7C2223002103B3 /* FPAuthPickerViewController.m */,
+				1005CCB11F7C2223002103B3 /* FPAuthPickerViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -129,7 +140,6 @@
 		2C85627A1AFAB65F00F0B24B /* shared */ = {
 			isa = PBXGroup;
 			children = (
-				2C85627D1AFAB65F00F0B24B /* Icon@2x.png */,
 				2C85627E1AFAB65F00F0B24B /* Images.xcassets */,
 				2C85627F1AFAB65F00F0B24B /* LaunchScreen.xib */,
 			);
@@ -172,9 +182,12 @@
 		5F5A534F1ADE670C00F81DF0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				10C9B1D91F7C0E600039E4BD /* Amaranth-Bold.otf */,
 				5F5A53591ADE670C00F81DF0 /* Main.storyboard */,
 				5F5A53501ADE670C00F81DF0 /* Info.plist */,
 				5F5A53511ADE670C00F81DF0 /* main.m */,
+				1005CCB81F7C3710002103B3 /* GradientLayer.h */,
+				1005CCB91F7C3710002103B3 /* GradientLayer.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -253,10 +266,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10C9B1DD1F7C0E600039E4BD /* Amaranth-Bold.otf in Resources */,
 				2C8562861AFAB65F00F0B24B /* LaunchScreen.xib in Resources */,
 				2C8562841AFAB65F00F0B24B /* Images.xcassets in Resources */,
+				1005CCB31F7C2223002103B3 /* FPAuthPickerViewController.xib in Resources */,
 				5F5A535B1ADE670C00F81DF0 /* Main.storyboard in Resources */,
-				2C8562821AFAB65F00F0B24B /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +293,9 @@
 				5F5A53521ADE670C00F81DF0 /* main.m in Sources */,
 				1061E5921C24F2E300B3BD42 /* FPComment.m in Sources */,
 				10563BFE1C29EDFB00356685 /* FPCommentViewController.m in Sources */,
+				1005CCB21F7C2223002103B3 /* FPAuthPickerViewController.m in Sources */,
 				1024C2E11C88C3FD00945A88 /* KZPropertyMapper+Date.m in Sources */,
+				1005CCBA1F7C3710002103B3 /* GradientLayer.m in Sources */,
 				1061E58E1C24B4EC00B3BD42 /* FPAppState.m in Sources */,
 				1061E5981C24F68200B3BD42 /* FPPost.m in Sources */,
 			);

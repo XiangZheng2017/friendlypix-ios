@@ -17,9 +17,7 @@
 #import "AppDelegate.h"
 
 @import Firebase;
-@import Fabric;
 @import FirebaseAuthUI;
-@import TwitterKit;
 
 #if defined(__IPHONE_10_0) && __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_10_0
 @import UserNotifications;
@@ -35,7 +33,6 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  [Fabric with:@[[Twitter class]]];
   // Use Firebase library to configure APIs
   [FIRApp configure];
   if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_9_x_Max) {

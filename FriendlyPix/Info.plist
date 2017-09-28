@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSCameraUsageDescription</key>
-	<string>Take and upload photos to Cloud Storage</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Upload photo to Cloud Storage</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -48,38 +44,9 @@
 				<string>fb{your-app-id}</string>
 			</array>
 		</dict>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLName</key>
-			<string>twitter</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>twitterkit-{consumer-key}</string>
-			</array>
-		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
-	<key>Fabric</key>
-	<dict>
-		<key>APIKey</key>
-		<string>FABRIC_API_KEY</string>
-		<key>Kits</key>
-		<array>
-			<dict>
-				<key>KitInfo</key>
-				<dict>
-					<key>consumerKey</key>
-					<string>{consumer-key}</string>
-					<key>consumerSecret</key>
-					<string>{consumer-secret}</string>
-				</dict>
-				<key>KitName</key>
-				<string>Twitter</string>
-			</dict>
-		</array>
-	</dict>
 	<key>FacebookAppID</key>
 	<string>{your-app-id}</string>
 	<key>FacebookDisplayName</key>
@@ -100,6 +67,10 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Take and upload photos to Cloud Storage</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Upload photo to Cloud Storage</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>remote-notification</string>

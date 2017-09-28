@@ -16,6 +16,7 @@
 
 #import "FPTabBarController.h"
 #import "FPEditPhotoViewController.h"
+@import FirebaseAuth;
 @import MobileCoreServices;
 
 @implementation FPTabBarController
@@ -165,5 +166,16 @@
     viewController.referenceURL = sender[UIImagePickerControllerReferenceURL];
   }
 }
+
+- (IBAction)didTapSignOut:(id)sender {
+  NSError *signOutError;
+  BOOL status = [[FIRAuth auth] signOut:&signOutError];
+  if (!status) {
+    NSLog(@"Error signing out: %@", signOutError);
+    return;
+  }
+  [self.parentViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 @end

@@ -16,7 +16,6 @@
 
 #import "FPHomeViewController.h"
 #import "FPAppState.h"
-@import FirebaseAuth;
 
 @implementation FPHomeViewController
 
@@ -113,13 +112,4 @@
   }];
 }
 
-- (IBAction)didTapSignOut:(id)sender {
-  NSError *signOutError;
-  BOOL status = [[FIRAuth auth] signOut:&signOutError];
-  if (!status) {
-    NSLog(@"Error signing out: %@", signOutError);
-    return;
-  }
-  [self.parentViewController dismissViewControllerAnimated:YES completion:nil];
-}
 @end

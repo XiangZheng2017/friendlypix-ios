@@ -16,11 +16,11 @@
 
 
 #import "SignInViewController.h"
+#import "FPAuthPickerViewController.h"
 #import "FPAppState.h"
 @import Firebase;
 @import FirebaseGoogleAuthUI;
 @import FirebaseFacebookAuthUI;
-@import FirebaseTwitterAuthUI;
 
 // Your Facebook App ID, which can be found on developers.facebook.com.
 static NSString *const kFacebookAppID = @"FACEBOOK_APP_ID";
@@ -34,8 +34,8 @@ static NSString *const kFirebaseTermsOfService = @"https://firebase.google.com/t
 
 @implementation SignInViewController
 
-- (void)viewWillAppear:(BOOL)animated {
-  [super viewWillAppear:animated];
+- (void)viewDidAppear:(BOOL)animated {
+  [super viewDidAppear:animated];
 
   self.authUI = [FUIAuth defaultAuthUI];
   self.authUI.delegate = self;
@@ -44,23 +44,36 @@ static NSString *const kFirebaseTermsOfService = @"https://firebase.google.com/t
   _authUI.signInWithEmailHidden = YES;
   NSArray<id<FUIAuthProvider>> *providers = @[
                                               [[FUIGoogleAuth alloc] init],
-                                              [[FUIFacebookAuth alloc] init],
-                                              [[FUITwitterAuth alloc] init],
+                                              [[FUIFacebookAuth alloc] init]
                                               ];
   _authUI.providers = providers;
+
+
+
+  UINavigationController *authViewController = [_authUI authViewController];
+  authViewController.navigationBar.hidden = YES;
+  [self presentViewController:authViewController animated:YES completion:nil];
 }
 
 - (void)authUI:(FUIAuth *)authUI didSignInWithUser:(nullable FIRUser *)user error:(nullable NSError *)error {
   if (error) {
-    NSLog(@"%@", error.localizedDescription);
-    return;
+    if (error.code == FUIAuthErrorCodeUserCancelledSignIn) {
+      NSLog(@"%@", @"User cancelled sign-in");
+    } else {
+      NSError *detailedError = error.userInfo[NSUnderlyingErrorKey];
+      if (!detailedError) {
+        detailedError = error;
+      }
+      NSLog(@"ERROR: %@", detailedError.localizedDescription);
+    }
   }
     [self signedIn:user];
 }
 
-- (IBAction)didTapSignIn:(UIButton *)sender {
-  UIViewController *authViewController = [_authUI authViewController];
-  [self presentViewController:authViewController animated:YES completion:nil];
+- (FUIAuthPickerViewController *)authPickerViewControllerForAuthUI:(FUIAuth *)authUI {
+  return [[FPAuthPickerViewController alloc] initWithNibName:@"FPAuthPickerViewController"
+                                                      bundle:[NSBundle mainBundle]
+                                                      authUI:authUI];
 }
 
 - (void)signedIn:(FIRUser *)user {
