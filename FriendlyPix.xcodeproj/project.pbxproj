@@ -70,8 +70,8 @@
 		1061E5971C24F68200B3BD42 /* FPPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPPost.m; sourceTree = "<group>"; };
 		106E09D21E5107C800A0FA44 /* FriendlyPix.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FriendlyPix.entitlements; sourceTree = "<group>"; };
 		10C9B1D91F7C0E600039E4BD /* Amaranth-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amaranth-Bold.otf"; sourceTree = "<group>"; };
-		2C85627E1AFAB65F00F0B24B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		2C85627F1AFAB65F00F0B24B /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		2C85627E1AFAB65F00F0B24B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../shared/Images.xcassets; sourceTree = "<group>"; };
+		2C85627F1AFAB65F00F0B24B /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = ../shared/LaunchScreen.xib; sourceTree = "<group>"; };
 		5F5A534C1ADE670C00F81DF0 /* FriendlyPix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendlyPix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F5A53501ADE670C00F81DF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F5A53511ADE670C00F81DF0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -137,19 +137,9 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		2C85627A1AFAB65F00F0B24B /* shared */ = {
-			isa = PBXGroup;
-			children = (
-				2C85627E1AFAB65F00F0B24B /* Images.xcassets */,
-				2C85627F1AFAB65F00F0B24B /* LaunchScreen.xib */,
-			);
-			path = shared;
-			sourceTree = "<group>";
-		};
 		5F5A53431ADE670C00F81DF0 = {
 			isa = PBXGroup;
 			children = (
-				2C85627A1AFAB65F00F0B24B /* shared */,
 				5F5A534E1ADE670C00F81DF0 /* FriendlyPix */,
 				5F5A534D1ADE670C00F81DF0 /* Products */,
 				AD1F1C80A93A096F652504F5 /* Frameworks */,
@@ -182,6 +172,8 @@
 		5F5A534F1ADE670C00F81DF0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2C85627E1AFAB65F00F0B24B /* Images.xcassets */,
+				2C85627F1AFAB65F00F0B24B /* LaunchScreen.xib */,
 				10C9B1D91F7C0E600039E4BD /* Amaranth-Bold.otf */,
 				5F5A53591ADE670C00F81DF0 /* Main.storyboard */,
 				5F5A53501ADE670C00F81DF0 /* Info.plist */,

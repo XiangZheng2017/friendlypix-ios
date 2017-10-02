@@ -30,8 +30,6 @@
 @interface FPPhotoTimelineViewController () <STXFeedPhotoCellDelegate, STXLikesCellDelegate,
     STXCaptionCellDelegate, STXCommentCellDelegate, STXUserActionDelegate>
 
-@property (strong, nonatomic) UIActivityIndicatorView *activityIndicatorView;
-
 @property (strong, nonatomic) STXFeedTableViewDataSource *tableViewDataSource;
 @property (strong, nonatomic) STXFeedTableViewDelegate *tableViewDelegate;
 @property (strong, nonatomic) NSMutableArray *posts;
@@ -60,8 +58,6 @@
   STXFeedTableViewDelegate *delegate = [[STXFeedTableViewDelegate alloc] initWithController:self];
   self.tableView.delegate = delegate;
   self.tableViewDelegate = delegate;
-   
-  self.activityIndicatorView = [self activityIndicatorViewOnView:self.view];
 
   _loadingPostCount = 0;
   [self loadData];
@@ -83,10 +79,6 @@
                                            selector:@selector(contentSizeCategoryChanged:)
                                                name:UIContentSizeCategoryDidChangeNotification
                                              object:nil];
-
-  if ((self.tableViewDataSource.posts).count == 0) {
-      [self.activityIndicatorView startAnimating];
-  }
 }
 
 - (void)loadData {

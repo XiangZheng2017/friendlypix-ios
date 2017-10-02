@@ -254,9 +254,8 @@
         <!--Navigation Controller-->
         <scene sceneID="ZvB-Tn-WbI">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ce4-Qc-v0B" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="Z85-RA-ES7" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="pfe-rM-Yf0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="pfe-rM-Yf0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.0078431372550000003" green="0.53333333329999999" blue="0.81960784310000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -269,6 +268,7 @@
                         <segue destination="EZH-O8-5Xn" kind="relationship" relationship="rootViewController" id="7To-tL-sme"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ce4-Qc-v0B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-854" y="-31"/>
         </scene>
@@ -277,7 +277,7 @@
             <objects>
                 <navigationController navigationBarHidden="YES" id="9Ax-OJ-ojm" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" enabled="NO" title="Home" image="ic_home_white_36pt" selectedImage="ic_home_36pt" id="p9g-Tl-fY1"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="V1X-tT-dxt">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="V1X-tT-dxt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
